@@ -48,14 +48,23 @@ function gererTouches() {
                 affichage = precedent;
                 precedent = 0;
                 break;
-            
+
             case "M+":
                 localStorage.memoire = (localStorage.memoire) ? parseFloat(localStorage.memoire) + parseFloat(affichage) : parseFloat(affichage);
                 memoireElt.style.display = "initial";
                 break;
+
             case "MC":
                 localStorage.memoire = 0;
                 memoireElt.style.display = "none";
+                break;
+
+            case "MR":
+                memoire = parseFloat(localStorage.memoire) ?? 0;
+                affichage = memoire;
+                ecranElt.innerText = memoire;
+                break;
+            default:
                 break;
         }
     }
