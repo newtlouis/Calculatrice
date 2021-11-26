@@ -53,6 +53,10 @@ function gererTouches() {
                 localStorage.memoire = (localStorage.memoire) ? parseFloat(localStorage.memoire) + parseFloat(affichage) : parseFloat(affichage);
                 memoireElt.style.display = "initial";
                 break;
+            case "MC":
+                localStorage.memoire = 0;
+                memoireElt.style.display = "none";
+                break;
         }
     }
 }
