@@ -4,3 +4,11 @@
     display: none;
     color: yellow;
 }
+
+body{
+    height: 100vh;
+}
+
+main{
+    margin-top: 10vh;
+}
